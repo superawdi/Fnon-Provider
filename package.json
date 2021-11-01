@@ -1,6 +1,6 @@
 {
     "name": "fnon-provider",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A convenient way to use some of Material UI Components",
     "main": "index.js",
     "scripts": {
@@ -19,6 +19,24 @@
         "MUI"
     ],
     "devDependencies": {
+        "@babel/cli": "^7.14.5",
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-class-properties": "^7.3.0",
+        "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+        "@babel/plugin-transform-object-assign": "^7.2.0",
+        "@babel/preset-env": "^7.3.1",
+        "@babel/preset-react": "^7.0.0",
+        "@storybook/addon-actions": "^5.3.17",
+        "@storybook/addon-links": "^5.3.17",
+        "@storybook/addons": "^5.3.17",
+        "@storybook/react": "^5.3.17",
+        "babel-eslint": "^10.0.1",
+        "babel-loader": "^8.1.0",
+        "coveralls": "^3.0.1",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.14.0",
+        "jest": "^25.2.3",
+        "standard": "^14.3.3",
         "@material-ui/core": "^4.12.3",
         "@material-ui/icons": "^4.11.2",
         "@material-ui/lab": "^4.0.0-alpha.60",
@@ -31,6 +49,9 @@
     },
     "author": "Adel Alawdy",
     "license": "MIT",
+    "standard": {
+        "parser": "babel-eslint"
+    },
     "bugs": {
         "url": "https://github.com/superawdi/FnonProvider/issues"
     },
