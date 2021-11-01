@@ -1,0 +1,38 @@
+{
+    "name": "fnon-provider",
+    "version": "1.0.0",
+    "description": "A convenient way to use some of Material UI Components",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/superawdi/FnonProvider.git"
+    },
+    "keywords": [
+        "Dialog",
+        "Provider",
+        "Snackbar",
+        "Material",
+        "UI",
+        "MUI"
+    ],
+    "devDependencies": {
+        "@material-ui/core": "^4.12.3",
+        "@material-ui/icons": "^4.11.2",
+        "@material-ui/lab": "^4.0.0-alpha.60",
+        "react": "^17.0.0",
+        "react-dom": "^17.0.0"
+    },
+    "peerDependencies": {
+        "@material-ui/core": "^4.12.3",
+        "react": "^17.0.0"
+    },
+    "author": "Adel Alawdy",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/superawdi/FnonProvider/issues"
+    },
+    "homepage": "https://github.com/superawdi/FnonProvider#readme"
+}
