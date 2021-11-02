@@ -16,6 +16,24 @@ npm i fnon-provider
 
 # usage
 
+### Add FnonProvider wrapper.
+
+```js
+import { createTheme, ThemeProvider } from "@material-ui/core";
+import FnonProvider from "fnon-provider";
+
+const theme = createTheme();
+
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <FnonProvider>
+      <App />
+    </FnonProvider>
+  </ThemeProvider>,
+  document.getElementById("root")
+);
+```
+
 ## 1 - Dialog :
 
 ```js
@@ -24,7 +42,7 @@ import { useFnon } from 'fnon-provider'
 
 function App() {
 
-  const [createDialog, closeDialog, useFullDialog, useSimpleDialog] = useFnon();
+  const [createDialog, closeDialog, createFullDialog, createSimpleDialog] = useFnon();
 
   // Create a dialog the normal way
   const onOpenDialog = () => {
@@ -45,7 +63,7 @@ function App() {
   }
   // Save time dialog
   const onYesNoDialog = () => {
-    useSimpleDialog({
+    createSimpleDialog({
       title: 'Yes No Dialog',
       children: 'Do you wish to proceed?', // a string or you can put a react component
       theme:'error', // this is optional if you want to change the background color of the header, [primary,secondary,error,info,success and warning]
@@ -58,7 +76,7 @@ function App() {
   }
 
   const onOpenFullDialog = () => {
-    useFullDialog({
+    createFullDialog({
       title: 'Test full dialog',
       children: (
         <>
@@ -126,6 +144,8 @@ function App() {
 
 ```
 
-___
+---
+
 ## License
+
 The files included in this repository are licensed under the MIT license.
