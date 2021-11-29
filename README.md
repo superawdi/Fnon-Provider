@@ -2,7 +2,7 @@
 
 A convenient way to use some of [Material UI](https://material-ui.com/) Components.
 
-### Please note that this is a personal package I created when I started working on a project with material UI and I thought it might help others who want to use some of the Material UI Components such as Dialogs and Snackerbars as I do in my project.
+### Please note that this is a personal package I created when I started working on a project with material UI and I thought it might help others who want to use some of the Material UI Components such as Dialogs, Snackerbars and Backdrop as I do in my project.
 
 ---
 
@@ -42,7 +42,7 @@ import { useFnon } from 'fnon-provider'
 
 function App() {
 
-  const [createDialog, closeDialog, createFullDialog, createSimpleDialog] = useFnon();
+  const {createDialog, closeDialog, createFullDialog, createSimpleDialog,clearDialogs} = useFnon();
 
   // Create a dialog the normal way
   const onOpenDialog = () => {
@@ -98,6 +98,8 @@ function App() {
     dialogProps: null // Material Ui Dialog props if you want ot change or add anything.
   }
 
+  // incase of navigation and you want to clear all dialogs just use the clearDialogs function.
+
   return (
     <div className="App">
         <p>
@@ -114,6 +116,8 @@ function App() {
 }
 
 ```
+### incase of navigation and you want to clear all dialogs just use the clearDialogs function.
+---
 
 ## 2 - Snackbar :
 
@@ -123,7 +127,7 @@ import { useFnon } from 'fnon-provider'
 
 function App() {
 
-  const [createSnackbar] = useFnon();
+  const {createSnackbar} = useFnon();
 
   const onCreateSnackBar = () => {
       createSnackbar({
@@ -138,6 +142,28 @@ function App() {
   return (
     <div className="App">
         <Button color="primary" variant="contained" onClick={onCreateSnackBar}>Create Snackbar</Button>
+    </div>
+  )
+}
+
+```
+
+## 3 - Backdrop :
+
+```js
+import { useFnon } from 'fnon-provider'
+
+
+function Page() {
+  const {showBackdrop} = useFnon();
+  return (
+    <div className="App">
+        <Button color="primary" variant="contained" onClick={()=>{
+          showBackdrop(
+            true, // boolean value 
+            'Please Wait' // optional if you want to add a message to the backdrop
+          );
+        }}>Display Backdrop</Button>
     </div>
   )
 }
